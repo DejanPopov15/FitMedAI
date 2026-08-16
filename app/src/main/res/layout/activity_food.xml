@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/foodMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main">
+
+    <!-- ========================= -->
+    <!-- TOP APP BAR -->
+    <!-- ========================= -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/foodTopBar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@color/app_bar"
+        android:paddingStart="@dimen/spacing_md"
+        android:paddingEnd="@dimen/spacing_md"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/foodTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_h2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- ========================= -->
+    <!-- MAIN FOOD CONTENT -->
+    <!-- ========================= -->
+
+    <ScrollView
+        android:id="@+id/foodScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingStart="@dimen/spacing_md"
+        android:paddingEnd="@dimen/spacing_md"
+        android:paddingTop="@dimen/spacing_md"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foodTopBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ========================= -->
+            <!-- SEARCH -->
+            <!-- ========================= -->
+
+            <EditText
+                android:id="@+id/foodSearch"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/search_background"
+                android:hint="Search food, recipes..."
+                android:paddingStart="@dimen/spacing_md"
+                android:paddingEnd="@dimen/spacing_md"
+                android:singleLine="true"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="@dimen/text_body" />
+
+
+            <!-- ========================= -->
+            <!-- SECTION TITLE -->
+            <!-- ========================= -->
+
+            <TextView
+                android:id="@+id/categoriesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:text="Explore"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_h3"
+                android:textStyle="bold" />
+
+
+            <!-- ========================= -->
+            <!-- CATEGORY GRID -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:id="@+id/categoryRowOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:orientation="horizontal">
+
+                <!-- RECIPES -->
+
+                <TextView
+                    android:id="@+id/recipesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="@dimen/spacing_sm"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_background"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_sm"
+                    android:text="🍴&#10;Recipes"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+                <!-- PRODUCTS -->
+
+                <TextView
+                    android:id="@+id/productsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/spacing_sm"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_background"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_sm"
+                    android:text="🛒&#10;Products"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/categoryRowTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:orientation="horizontal">
+
+                <!-- NUTRITION SCORE -->
+
+                <TextView
+                    android:id="@+id/nutritionScoreButton"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="@dimen/spacing_sm"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_background"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_sm"
+                    android:text="🥗&#10;Nutrition Score"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+                <!-- MEAL PLANS -->
+
+                <TextView
+                    android:id="@+id/mealPlansButton"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/spacing_sm"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_background"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_sm"
+                    android:text="📋&#10;Meal Plans"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ========================= -->
+            <!-- FEATURED RECIPES -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xl"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/featuredTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Featured Recipes"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_h3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/viewAllRecipes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ========================= -->
+            <!-- RECIPE CARD 1 -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:id="@+id/recipeCardOne"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Healthy Breakfast"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_h3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:text="High protein • Balanced nutrition"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:text="320 kcal"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ========================= -->
+            <!-- RECIPE CARD 2 -->
+            <!-- ========================= -->
+
+            <LinearLayout
+                android:id="@+id/recipeCardTwo"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_md">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mediterranean Bowl"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_h3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:text="Vegetables • Protein • Healthy fats"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:text="450 kcal"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ========================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:id="@+id/foodBottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@color/bottom_nav"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacing_xs"
+        android:paddingBottom="@dimen/spacing_xs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- HOME -->
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⌂&#10;Home"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_small" />
+
+        <!-- FOOD -->
+
+        <TextView
+            android:id="@+id/navFood"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●&#10;Food"
+            android:textAlignment="center"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <!-- WORKOUT -->
+
+        <TextView
+            android:id="@+id/navWorkout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⚡&#10;Workout"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_small" />
+
+        <!-- HEALTH -->
+
+        <TextView
+            android:id="@+id/navHealth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="♥&#10;Health"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_small" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

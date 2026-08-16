@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Background -->
+    <color name="background_main">#0B1410</color>
+
+    <!-- Surface / Cards -->
+    <color name="surface">#13221A</color>
+
+    <!-- Top App Bar -->
+    <color name="app_bar">#173D2A</color>
+
+    <!-- Primary Green -->
+    <color name="primary_green">#3F8F5B</color>
+
+    <!-- Light Green -->
+    <color name="light_green">#6BAF7A</color>
+
+    <!-- Brand Gold -->
+    <color name="gold">#D4AF5A</color>
+    <color name="gold_light">#E5C875</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F4F7F3</color>
+    <color name="text_secondary">#A8B5AD</color>
+    <color name="text_inactive">#7F8C84</color>
+
+    <!-- Borders -->
+    <color name="border">#26362D</color>
+
+    <!-- Status -->
+    <color name="success">#2E7D32</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#D32F2F</color>
+
+    <!-- Craving -->
+    <color name="craving_primary">#C94A4A</color>
+    <color name="craving_glow">#E46A6A</color>
+
+    <!-- AI -->
+    <color name="ai_primary">#4CC9C0</color>
+    <color name="ai_glow">#72F0E5</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav">#121A16</color>
+
+    <!-- Basic -->
+    <color name="white">#FFFFFF</color>
+
+</resources>
